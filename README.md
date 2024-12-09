@@ -8,7 +8,7 @@
 
 # Introduction
 
-Food is an integral part of daily life, not just for sustenance but also for enjoyment and expression. With the rising prominence of online recipe platforms like Food.com, cooking has evolved from being a necessity to becoming an accessible and creative hobby. The digital age has allowed recipes to be rated, reviewed, and shared by millions, offering invaluable insights into public culinary preferences and trends.
+Food is an integral part of daily life, not just for sustenance but also for enjoyment and expression. With the rising prominence of online recipe platforms like [Food.com](https://www.food.com), cooking has evolved from being a necessity to becoming an accessible and creative hobby. The digital age has allowed recipes to be rated, reviewed, and shared by millions, offering invaluable insights into public culinary preferences and trends.
 
 This project aims to leverage data science to analyze and uncover patterns within recipes and user interactions on Food.com. Specifically, the research centers around the question:
 
@@ -22,32 +22,32 @@ Understanding recipe preparation times is essential for everyday users planning 
 
 This analysis uses two datasets sourced from Food.com, containing a wealth of information about recipes and user interactions:
 
-### `recipes` Dataset
+### `Recipes` Dataset
 This dataset contains **83,782 rows**, each representing a unique recipe, with the following key columns relevant to this study:
 
 | Column            | Description                                                                                                     |
 |-------------------|-----------------------------------------------------------------------------------------------------------------|
-| `name`            | Recipe name                                                                                                    |
-| `id`              | Unique identifier for each recipe                                                                              |
-| `minutes`         | Time (in minutes) to prepare the recipe                                                                        |
-| `n_steps`         | Number of steps in the recipe                                                                                  |
-| `n_ingredients`   | Number of ingredients required for the recipe                                                                  |
-| `tags`            | List of Food.com tags associated with the recipe, such as "quick" or "vegetarian"                              |
-| `nutrition`       | Nutrition details including calories, fat, sugar, protein, sodium, and carbohydrates                           |
-| `description`     | A user-provided description of the recipe                                                                      |
-| `steps`           | Text outlining the recipe steps                                                                               |
-| `ingredients`     | Text listing the ingredients for the recipe                                                                    |
+| ``name``            | Recipe name                                                                                                    |
+| ``id``              | Unique identifier for each recipe                                                                              |
+| ``minutes``         | Time (in minutes) to prepare the recipe                                                                        |
+| ``n_steps``         | Number of steps in the recipe                                                                                  |
+| ``n_ingredients``   | Number of ingredients required for the recipe                                                                  |
+| ``tags``            | List of Food.com tags associated with the recipe, such as "quick" or "vegetarian"                              |
+| ``nutrition``       | Nutrition details including calories, fat, sugar, protein, sodium, and carbohydrates                           |
+| ``description``     | A user-provided description of the recipe                                                                      |
+| ``steps``           | Text outlining the recipe steps                                                                               |
+| ``ingredients``     | Text listing the ingredients for the recipe                                                                    |
 
-### `interactions` Dataset
+### `Interactions` Dataset
 This dataset contains **731,927 rows**, each capturing a user's interaction with a specific recipe. The key columns are:
 
 | Column      | Description                                   |
 |-------------|-----------------------------------------------|
-| `user_id`   | Unique identifier for the user               |
-| `recipe_id` | Unique identifier linking to a recipe        |
-| `date`      | Date when the interaction occurred           |
-| `rating`    | Rating given by the user to the recipe (1–5 scale) |
-| `review`    | Textual review provided by the user          |
+| ``user_id``   | Unique identifier for the user               |
+| ``recipe_id`` | Unique identifier linking to a recipe        |
+| ``date``      | Date when the interaction occurred           |
+| ``rating``    | Rating given by the user to the recipe (1–5 scale) |
+| ``review``    | Textual review provided by the user          |
 
 ---
 
@@ -61,4 +61,4 @@ The question about predicting recipe preparation times is practical and widely a
 
 ---
 
-By addressing this question, the project not only provides actionable insights for recipe users and creators but also highlights the power of data science in uncovering patterns and making predictions in everyday scenarios. This work underscores how leveraging the wealth of data in online platforms like Food.com can improve user experiences and enhance decision-making.
+
