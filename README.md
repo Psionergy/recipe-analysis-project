@@ -64,7 +64,7 @@ The question about predicting recipe preparation times is practical and widely a
 Below is the ratings distribution chart:
 
 <iframe
-  src="assets/ratings_distribution/ratings_distribution.html"
+  src="assets/ratings_distribution.html"
   width="800"
   height="600"
   frameborder="0"
