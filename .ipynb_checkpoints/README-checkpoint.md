@@ -6,33 +6,59 @@
 
 ---
 
-## Introduction
-This project examines a dataset of over 83,000 recipes and their corresponding preparation times to answer the question:  
-**What factors influence the time required to prepare a recipe?**
+# Introduction
 
-Understanding recipe preparation times helps home cooks and professional chefs optimize their meal planning. The dataset includes features such as:
-- **`n_ingredients`**: The number of ingredients in a recipe.
-- **`n_steps`**: The number of steps in a recipe.
-- **`minutes`**: The time it takes to prepare a recipe (target variable).
-- **`mean_ingredient_time`**: The average time per ingredient.
-- **`ingredients_per_step`**: The number of ingredients per step.
+Food is an integral part of daily life, not just for sustenance but also for enjoyment and expression. With the rising prominence of online recipe platforms like [Food.com](https://www.food.com), cooking has evolved from being a necessity to becoming an accessible and creative hobby. The digital age has allowed recipes to be rated, reviewed, and shared by millions, offering invaluable insights into public culinary preferences and trends.
 
-The dataset has **83,782 rows**, and these features provide insight into the complexity of recipes and their preparation times.
+This project aims to leverage data science to analyze and uncover patterns within recipes and user interactions on Food.com. Specifically, the research centers around the question:
+
+**"What factors influence the preparation time of recipes, and how can we use these factors to predict recipe preparation time effectively?"**
+
+Understanding recipe preparation times is essential for everyday users planning their meals and for content creators optimizing their recipes for engagement and usability. By identifying trends and predictive factors, this study can help readers better understand the interplay between recipe characteristics and cooking time, making it a practical application of data science.
 
 ---
 
-## Data Cleaning and Exploratory Data Analysis
-### Data Cleaning
-The following steps were taken to clean the dataset:
-1. Removed recipes with missing or zero values for `minutes`, `n_ingredients`, or `n_steps`.
-2. Added engineered features:  
-   - `log_minutes`: The logarithm of preparation time for skewed distributions.  
-   - `mean_ingredient_time`: Preparation time per ingredient.
-   - `ingredients_per_step`: Ingredients per step.
+## The Dataset
 
-Here is the head of the cleaned DataFrame:
-```python
-   n_ingredients  n_steps  mean_ingredient_time  ingredients_per_step  log_minutes
-0              9       10              4.444444              0.900000     3.713572
-1             11       12              4.090909              0.916667     3.828641
-2              9        6              4.444444              1.500000     3.713572
+This analysis uses two datasets sourced from Food.com, containing a wealth of information about recipes and user interactions:
+
+### `Recipes` Dataset
+This dataset contains **83,782 rows**, each representing a unique recipe, with the following key columns relevant to this study:
+
+| Column            | Description                                                                                                     |
+|-------------------|-----------------------------------------------------------------------------------------------------------------|
+| ``name``            | Recipe name                                                                                                    |
+| ``id``              | Unique identifier for each recipe                                                                              |
+| ``minutes``         | Time (in minutes) to prepare the recipe                                                                        |
+| ``n_steps``         | Number of steps in the recipe                                                                                  |
+| ``n_ingredients``   | Number of ingredients required for the recipe                                                                  |
+| ``tags``            | List of Food.com tags associated with the recipe, such as "quick" or "vegetarian"                              |
+| ``nutrition``       | Nutrition details including calories, fat, sugar, protein, sodium, and carbohydrates                           |
+| ``description``     | A user-provided description of the recipe                                                                      |
+| ``steps``           | Text outlining the recipe steps                                                                               |
+| ``ingredients``     | Text listing the ingredients for the recipe                                                                    |
+
+### `Interactions` Dataset
+This dataset contains **731,927 rows**, each capturing a user's interaction with a specific recipe. The key columns are:
+
+| Column      | Description                                   |
+|-------------|-----------------------------------------------|
+| ``user_id``   | Unique identifier for the user               |
+| ``recipe_id`` | Unique identifier linking to a recipe        |
+| ``date``      | Date when the interaction occurred           |
+| ``rating``    | Rating given by the user to the recipe (1–5 scale) |
+| ``review``    | Textual review provided by the user          |
+
+---
+
+## Relevance of the Research Question
+
+The question about predicting recipe preparation times is practical and widely applicable:
+
+1. **For Everyday Users**: Knowing the estimated time to prepare a recipe helps in meal planning, especially for busy individuals or families.  
+2. **For Recipe Creators**: Identifying key factors influencing preparation time allows them to optimize recipes to suit specific audiences, like those seeking quick meals or more elaborate dishes.  
+3. **For Data Enthusiasts**: This project showcases how exploratory data analysis, feature engineering, and predictive modeling can work together to address a real-world problem.  
+
+---
+
+
